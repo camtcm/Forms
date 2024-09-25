@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bind_param("sssssssssss", $nombre_apellidos, $fecha_nacimiento, $ocupacion, $telefono,$email, $nacionalidad, $nivel_ingles, $lenguajes_programacion, $aptitudes, $habilidades, $perfil);
 
     if ($stmt->execute()) {
-        echo "Datos guardados exitosamente. <a href='display_cv.php'>Ver CV</a>";
+        echo "Datos guardados <a href='display_cv.php'>Ver CV</a>";
     } else {
         echo "Error: " . $stmt->error;
     }
